@@ -1,3 +1,4 @@
+/* Highlight the current nav link when this page is opened directly or by navigation. */
 setActiveNavLink();
 
 function setActiveNavLink(){

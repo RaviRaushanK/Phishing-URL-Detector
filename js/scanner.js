@@ -3,9 +3,6 @@ const scannerInput = document.getElementById("scannerInput");
 const analyzeBtn = document.getElementById("analyzeBtn");
 const scannerClearBtn = document.getElementById("scannerClearBtn");
 
-/* CHANGE: Highlight the current nav link when this page is opened directly or by navigation. */
-setActiveNavLink();
-
 const resultContainer = document.getElementById("resultContainer");
 const bodyImage = document.querySelector(".body-image");
 
@@ -233,8 +230,7 @@ function analyzeURLChecks(url){
 
     return {
         score: Math.min(score, 100),
-        checks,
-        detectedChecks: checks.filter(check => check.detected)
+        checks
     };
 
 }
@@ -299,29 +295,6 @@ function updateCircle(percent){
     glow.style.stroke = color;
 
     label.innerHTML = `${percent}%`;
-
-}
-
-
-// ============================================
-// DYNAMIC COLORS
-// ============================================
-
-function getColor(percent){
-
-    if(percent < 30){
-
-        return "#00ff88";
-
-    }else if(percent < 70){
-
-        return "#ffb700";
-
-    }else{
-
-        return "#ff3b3b";
-
-    }
 
 }
 
@@ -646,27 +619,3 @@ function getRiskClass(value, max){
 
 }
 
-
-function setActiveNavLink(){
-
-    const currentPage = window.location.pathname.split("/").pop() || "index.html";
-
-    document.querySelectorAll(".nav-link-mid").forEach(link => {
-
-        const linkPage = link.getAttribute("href");
-
-        if(linkPage === currentPage){
-
-            link.classList.add("active-page");
-            link.setAttribute("aria-current", "page");
-
-        }else{
-
-            link.classList.remove("active-page");
-            link.removeAttribute("aria-current");
-
-        }
-
-    });
-
-}

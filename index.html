@@ -1,0 +1,347 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home</title>
+    <link rel="stylesheet" href="assets/css/index.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css" integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet"   integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+</head>
+<body>
+    <!-- Nav-bar -->
+    <nav class="navbar container-fluid cust-nav">
+        <div class="nav-left">
+            <div class="nav-logo">
+                <img src="assets/images/logo.png" alt="Logo" width="38" height="40">
+            </div>
+            <div class="nav-left-text">
+                <span class="lead fw-bold">PhishShield</span>
+                <span class="small" style="color: #3B82F6;">URL Detector</span>
+            </div> 
+        </div>
+        <div class="nav-mid">
+            <a href="index.html" class="nav-link nav-link-mid active-page">Home</a>
+            <a href="scanner.html" class="nav-link nav-link-mid">URL Checker</a>
+            <a href="tips.html" class="nav-link nav-link-mid">Tips</a>
+            <a href="about.html" class="nav-link nav-link-mid">About</a>
+            <a href="contact.html" class="nav-link nav-link-mid">Contact</a>
+        </div>
+        <div class="nav-right">
+            <a href="scanner.html">
+                <button type="button" class="btn nav-btn"><span class="px-2 py-2">Scan URL</span></button>
+            </a>
+        </div>
+    </nav>
+
+<!-- Hero-section -->
+    <div class="container mt-5 pt-3">
+        <div class="row hero-section align-items-start">
+            <div class="hero-left col-6">
+                <h1 class="fw-bold">
+                    <span>Detect</span>
+                    <span style="color: #3B82F6;">Phishing</span><br>
+                    <span>Websites Instantly</span>
+                </h1>
+
+                <p class="hero-description">
+                    Check suspicious links and stay protected from online threats.<br>
+                    Our advanced engine analyzes URLs in real-time and <br>identifies phishing attempts.
+                </p>
+                <i class="fa-solid fa-shield-halved" style="color:#028b3b"></i>
+                <span class="hero-description">We never store or share your data. <span style="color: #0b56cf;">100%</span> secure.</span>
+            </div>
+
+            <div class="hero-right col-6">
+                <img src="assets/images/home-shield.png" alt="shield"> 
+            </div>
+        </div>
+    </div>
+
+    <div class="container mb-3">
+        <div class="hero-input-card pt-3 pb-3 px-3">
+            <div class="input-group input-group-lg">
+                <span class="input-group-text" id="inputGroup-sizing-lg" style="background-color: #cacaca;"><i class="fa-solid fa-link"></i> </span>
+                <input type="text" id="homeInput" placeholder="Enter URL to scan..." class="form-control" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-lg">
+                <button type="button" id="scanBtn" class="btn btn-primary">Check URL</button>
+            </div>
+        </div>
+    </div>
+  
+
+    <!-- Guide section -->
+    <div class="guide-section mt-5 pb-3">
+        <h3 class="text-center pt-2 mb-3">How <span class="text-decoration-underline" style="text-underline-offset: 1rem;">It W</span>orks</h3>
+        <div class="container pt-2 pb-3"> 
+            <div class="d-flex justify-content-around align-items-center">
+
+                <div class="card d-flex justify-content-center align-items-center mt-3    guide-card">
+                    <div class="guide-circle d-flex justify-content-center align-items-center">
+                        <i class="fa-solid fa-link fw-bold" style="font-size: 2rem; color:#ffffff"></i>
+                    </div>
+                    <div class="mt-3">
+                        <div class="d-flex justify-content-start align-items-center mb-2">
+                            <div class="rounded-circle d-flex justify-content-center align-items-center   guide-samall-circle ">
+                                <span style="color: white; font-weight: bold; line-height: 0;">1</span>
+                            </div>
+                            <span class="px-3 lead fw-bold" style="color: white; ">Enter URL</span>
+                        </div>
+                        <div>
+                            <span class="description">Paste the suspicious URL</span><br>
+                            <span class="description">you want to check.</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="dotted-line" style="border-top: 2px dashed #fcfcfc;"></div>
+                
+                <div class="card d-flex justify-content-center align-items-center mt-3   guide-card">
+                    <div class="guide-circle d-flex justify-content-center align-items-center">
+                        <i class="fa-solid fa-magnifying-glass" style="font-size: 2rem; color:#ffffff;"></i>
+                    </div>
+                    <div class="mt-3">
+                        <div class="d-flex justify-content-start align-items-center mb-2">
+                            <div class="rounded-circle d-flex justify-content-center align-items-center   guide-samall-circle ">
+                                <span style="color: white; font-weight: bold; line-height: 0;">2</span>
+                            </div>
+                            <span class="px-3 lead fw-bold" style="color: white; ">System Scans</span>
+                        </div>
+                        <div>
+                            <span class="description">Our engine scans the URL</span><br>
+                            <span class="description">for threats and anomalies.</span>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="dotted-line"></div>
+                
+                <div class="card d-flex justify-content-center align-items-center mt-3   guide-card">
+                    <div class="guide-circle d-flex justify-content-center align-items-center">
+                        <i class="fa-solid fa-shield-virus" style="font-size: 2.5rem; color:#ffffff"></i>
+                    </div>
+                    <div class="mt-3">
+                        <div class="d-flex justify-content-start align-items-center mb-2">
+                            <div class="rounded-circle d-flex justify-content-center align-items-center   guide-samall-circle ">
+                                <span style="color: white; font-weight: bold; line-height: 0;">3</span>
+                            </div>
+                            <span class="px-3 lead fw-bold" style="color: white; ">Risk Analysis</span>
+                        </div>
+                        <div>
+                            <span class="description">We analyze multiple factors</span> <br>
+                            <span class="description">and calculate risk score.</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="dotted-line" style="border-top: 2px dashed #fcfcfc;"></div>
+                
+                <div class="card d-flex justify-content-center align-items-center mt-3   guide-card">
+                    <div class="guide-circle d-flex justify-content-center align-items-center">
+                        <i class="fa-solid fa-book" style="font-size: 2.5rem; color:#ffffff"></i>
+                    </div>
+                    <div class="mt-3">
+                        <div class="d-flex justify-content-start align-items-center mb-2">
+                            <div class="rounded-circle d-flex justify-content-center align-items-center   guide-samall-circle ">
+                                <span style="color: white; font-weight: bold; line-height: 0;">4</span>
+                            </div>
+                            <span class="px-3 lead fw-bold" style="color: white; ">Get Results</span>
+                        </div>
+                        <div>
+                            <span class="description">View detailed results and</span> <br>
+                            <span class="description">stay safe online.</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <h3 class="text-center mt-4 mb-3">Why Choose PhishShield?</h3>
+
+
+<!-- Feature section -->
+    <div class="container mb-4">
+        <div class="row-1 mb-3 d-flex justify-content-between">
+            <div class="card feature-card d-flex justify-content-center align-items-center">
+                <div class="circle bg-blue-trans mb-2 d-flex justify-content-center align-items-center">
+                    <i class="fa-solid fa-bolt-lightning" style="font-size: 2rem; color:#639fff;"></i>
+                </div>
+                <span class="lead fw-bold mb-1" style="color: rgb(255, 255, 255); ">Real-Time Detection</span>
+                <span class="description">Instantly analyze URLs and</span> 
+                <span class="description">detect phishing threats</span>
+            </div>
+
+            <div class="card feature-card d-flex justify-content-center align-items-center">
+                <div class="circle bg-green-trans mb-2 d-flex justify-content-center align-items-center">
+                    <i class="fa-solid fa-shield-halved" style="font-size: 2rem; color:rgba(56, 255, 66);"></i>
+                </div>
+                <span class="lead fw-bold mb-1" style="color: rgb(255, 255, 255); ">High Accuracy</span>
+                <span class="description">Advanced algorithms ensure</span> 
+                <span class="description">high detection accuracy.</span>
+            </div>
+
+            <div class="card feature-card d-flex justify-content-center align-items-center">
+                <div class="circle bg-red-trans mb-2 d-flex justify-content-center align-items-center">
+                    <i class="fa-regular fa-flag" style="font-size: 2rem; color:rgba(255, 56, 56)"></i>
+                </div>
+                <span class="lead fw-bold mb-1" style="color: rgb(255, 255, 255); ">Report Threats</span>
+                <span class="description">Help teh community by reporting</span> 
+                <span class="description">malicious and phishing URLs.</span>
+            </div>
+
+            <div class="card feature-card d-flex justify-content-center align-items-center">
+                <div class="circle bg-pink-trans mb-2 d-flex justify-content-center align-items-center">
+                    <i class="fa-solid fa-chart-line" style="font-size: 2rem; color:rgba(255, 56, 202)"></i>
+                </div>
+                <span class="lead fw-bold mb-1" style="color: rgb(255, 255, 255); ">Risk Scoring</span>
+                <span class="description">Get accurate risk score </span> 
+                <span class="description">based on multiple factors.</span>
+            </div>
+        </div>
+
+        <div class="row-2 d-flex justify-content-between">
+            <div class="feature-card-mini d-flex justify-content-center align-items-center">
+                <div class="tip-left mx-2">
+                    <i class="fa-solid fa-globe" style="font-size: 3rem; color:#639fff;"></i>
+                </div>
+                <div class="tip-right mx-2">
+                    <h3 class="fw-bold mb-0" style="color: rgb(255, 255, 255);">10,248+</h3>
+                    <span class="description">URLs Scanned</span>
+                </div>
+            </div>
+
+            <div class="feature-card-mini d-flex justify-content-center align-items-center">
+                <div class="tip-left mx-2">
+                    <i class="fa-solid fa-shield-virus" style="font-size: 3rem; color:rgba(255, 0, 0, 0.934);"></i>
+                </div>
+                <div class="tip-right mx-2">
+                    <h3 class="fw-bold mb-0" style="color: rgb(255, 255, 255);">2,349+</h3>
+                    <span class="description">Threats Detected</span>
+                </div>
+            </div>
+
+            <div class="feature-card-mini d-flex justify-content-center align-items-center">
+                <div class="tip-left mx-2">
+                    <i class="fa-solid fa-user-shield" style="font-size: 3rem; color:rgb(29, 251, 40);"></i>
+                </div>
+                <div class="tip-right mx-2">
+                    <h3 class="fw-bold mb-0" style="color: rgb(255, 255, 255);">5,872+</h3>
+                    <span class="description">User Protected</span>
+                </div>
+            </div>
+
+            <div class="feature-card-mini d-flex justify-content-center align-items-center">
+                <div class="tip-left mx-2">
+                    <i class="fa-solid fa-bullseye" style="font-size: 3rem; color:rgb(251, 173, 29);"></i>
+                </div>
+                <div class="tip-right mx-2">
+                    <h3 class="fw-bold mb-0" style="color: rgb(255, 255, 255);">99.2%</h3>
+                    <span class="description">Detection Accuracy</span>
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+    <!-- About section -->
+    <div class="about-section mb-3">
+        <div class="container d-flex justify-content-between"> 
+            <div class="about-left pt-4">
+                <h3 class="mb-4">
+                    <span class="text-decoration-underline" style="text-underline-offset: 1rem;">Abo</span>ut Phishing
+                </h3>
+                <div class="mb-3">
+                    <span class="description">Phishing is a cyber attack where attackers trick you into revealing <br> sensitive information like passwords, bank details, or credit card <br> numbers by pretending to be a trustworthy entity.</span>
+                </div>
+                <div class="mb-2 d-flex justify-content-start align-items-center">
+                    <i class="fa-regular fa-circle-check" style="font-size: 1.4rem; color:#03ad49"></i> 
+                    <span class="description mx-2 pb-1">Phishing sites look almost identical to real websites.</span>
+                </div>
+                <div class="mb-2 d-flex justify-content-start align-items-center">
+                    <i class="fa-regular fa-circle-check" style="font-size: 1.4rem; color:#03ad49"></i> 
+                    <span class="description mx-2 pb-1">Attackers use fake links to steal you personal information.</span>
+                </div>
+                <div class="mb-2 d-flex justify-content-start align-items-center">
+                    <i class="fa-regular fa-circle-check" style="font-size: 1.4rem; color:#03ad49"></i> 
+                    <span class="description mx-2 pb-1">Always verify URLs before entering any sensitive data.</span>
+                </div>
+            </div>
+            <div style="border:3px solid rgba(1, 13, 52, 0.581);"></div>
+            <div class="about-right">
+              <img src="assets/images/about-img-final.png" alt="shield"> 
+            </div>
+        </div>
+    </div>
+
+    <h3 class="text-center pt-2 mb-5">Stay Sa<span class="text-decoration-underline" style="text-underline-offset: 1rem;">fe O</span>nline</h3>
+    
+    <!-- Tips section -->
+    <div class="container mb-5">
+        <div class="d-flex justify-content-between">
+
+            <div class="tip d-flex justify-content-center align-items-center">
+                <div class="tip-left mx-2">
+                    <i class="fa-solid fa-link" style="font-size: 3rem; color:#4747ffeb;"></i>
+                </div>
+                <div class="tip-right mx-2">
+                    <span class="description">Always check the URL<br>
+                    before clicking on any link.
+                    </span>
+                </div>
+            </div>
+
+            <div class="border border-secondary"></div>
+
+            <div class="tip d-flex justify-content-center align-items-center">
+                <div class="tip-left mx-2">
+                    <i class="fa-brands fa-expeditedssl" style="font-size: 3rem; color:rgb(251, 173, 29);"></i>
+                </div>
+                <div class="tip-right mx-2">
+                    <span class="description">Look for HTTPS and<br>
+                    valid SSL certificate.
+                    </span>
+                </div>
+            </div>
+
+            <div class="border border-secondary"></div>
+            
+            <div class="tip d-flex justify-content-center align-items-center">
+                <div class="tip-left mx-2">
+                    <i class="fa-regular fa-envelope" style="font-size: 3rem; color:rgba(255, 56, 56, 0.953);"></i>
+                </div>
+                <div class="tip-right mx-2">
+                   <span class="description">Don't share personal<br>
+                    information on unknown sites.
+                    </span>
+                </div>
+            </div>
+
+            <div class="border border-secondary"></div>
+
+            <div class="tip d-flex justify-content-center align-items-center">
+                <div class="tip-left mx-2">
+                    <i class="fa-solid fa-users" style="font-size: 3rem; color:#639fff;"></i>
+                </div>
+                <div class="tip-right mx-2">
+                    <span class="description">Report suspicious links<br>
+                    to help others stay safe.
+                    </span>
+                </div>
+            </div>
+
+        </div>
+    </div>
+    <footer class="footer pb-5">
+        <div class="mb-3 pt-3 d-flex justify-content-center">
+            <a href="index.html" class="nav-link nav-link-footer">Home</a>
+            <a href="scanner.html" class="nav-link nav-link-footer">URL Checker</a>
+            <a href="tips.html" class="nav-link nav-link-footer">Tips</a>
+            <a href="about.html" class="nav-link nav-link-footer">About</a>
+            <a href="contact.html" class="nav-link nav-link-footer">Contact</a>
+        </div>
+        <hr class="mb-3 border border-2 opacity-50">
+        <div class="text-center">&copy; URLs Detector, Inc</div>
+    </footer>
+    <script src="js/index.js"></script>
+</body>
+</html>

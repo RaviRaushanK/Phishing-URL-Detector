@@ -1,0 +1,284 @@
+*{
+    padding: 0;
+    margin: 0;
+}
+.description{
+    color: #e7e5e5e0 !important;
+} 
+
+body{
+    background-color: #000416 !important;
+    color: white !important;
+}
+
+/* Navbar Styling */
+.cust-nav{
+    position: fixed !important;
+    top: 0;         
+    left: 0;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    height:4rem;
+    width: 100%; 
+    z-index: 1000;
+    background-color: #00041a !important;
+    color: white;
+    border-bottom: 2px solid #2564eb1a;
+}
+
+.nav-left{
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    margin-left: 1.5rem;
+}
+
+.nav-left div{
+    margin-right: 0.5rem;
+}
+
+.nav-right{
+    margin-right: 1.5rem;
+}
+
+.nav-left-text{
+    display: flex;
+    flex-direction: column;
+}
+
+.nav-left-text span{
+    margin:0;
+    padding: 0;
+    line-height: 1.2;
+}
+
+.nav-mid{
+    display: flex;
+    flex-direction: row;
+
+}
+
+.nav-link-mid{
+    color: #ffffffbf;
+    padding-left: 2rem !important;
+    padding-right: 2rem !important;
+    font-size: 1rem;
+}
+
+/* CHANGE: Current page nav link stays blue after direct access or navigation. */
+.nav-link-mid.active-page{
+    color: #ffffffbf !important;
+    text-decoration: none !important;
+    font-size: 1.1rem;
+    font-weight: 600;
+    transform: none;
+}
+
+.nav-btn{
+    background-color: #2563EB !important;
+    color: white !important;
+}
+ 
+.nav-link-mid:hover{
+    transform: scale(1.1);
+    color: #3B82F6 !important;
+    text-decoration: 2px underline !important;
+    text-underline-offset: 0.7rem !important;
+}
+
+/* CHANGE: Current page link keeps its active style and ignores hover styling. */
+.nav-link-mid.active-page:hover{
+    color: #ffffffbf !important;
+    text-decoration: none !important;
+    transform: none;
+}
+.nav-btn:hover{
+   animation: pulse 1s ease-in-out infinite;
+}
+
+@keyframes pulse {
+    0% {
+        transform: scale(1);
+    }
+
+    50% {
+        transform: scale(1.15);
+    }
+
+    100% {
+        transform: scale(1);
+    }
+}
+
+/* Hero-section-styling */
+.hero-section{
+    margin: 1.5rem 4rem 0 4rem;
+    padding-top: 1rem;
+}
+
+.hero-description{
+    color: #d0d0d0eb !important;
+} 
+
+.hero-left{
+    margin-top:1.5rem !important;
+}
+
+.hero-right{
+    height: 18.5rem;
+    overflow: hidden;
+}
+
+/* scanner-hero */
+.hero-right-scanner{
+    height: 15rem;
+    overflow: hidden;
+}
+
+.hero-right-scanner img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.hero-right img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.hero-input-card{
+    width: 90% !important;
+}
+
+.hero-input-card{
+    height: auto;
+    width: auto;
+    border-radius: 0.8rem !important;
+    background-color: #0106215d !important;
+    border: 1px solid #021050!important;
+    color: white !important;
+}
+
+.input-bg{
+    border: 1px solid #021050!important;
+}
+
+/* Guide Secton */
+.guide-section{
+    height: auto;
+    width:100%;
+    background-color: #000621;
+}
+
+.guide-circle {
+    width: 5rem; 
+    height: 5rem; 
+    border-radius: 50%;
+    background-color: #3884ff49; 
+    border: 2px solid #3884ffcc; 
+    box-shadow: 
+        0 0 10px 8px #3884ff80,
+        inset 0 0 8px #3884ff66;
+}
+
+.guide-card{
+    background-color: #000621 !important;
+    width: 15rem; 
+    height: 15rem;
+}
+
+.dotted-line{
+    width: 10rem;
+    border-top: 2px dashed #fcfcfc;
+    margin-bottom: 5.5rem;
+}
+
+.guide-samall-circle{
+    background-color: #0b56cf; 
+    width: 2rem;
+    height: 2rem;
+}
+
+/*Feature section  */
+.feature-card{
+    height: 13rem !important;
+    width: 18.5rem !important;
+    border-radius: 0.8rem !important;
+    background-color: #0106215d !important;
+    border: 1px solid #010b3a!important;
+    color: white !important;
+}
+
+.circle {
+    width: 5rem; 
+    height: 5rem; 
+    border-radius: 50%; 
+}
+
+.bg-blue-trans{
+    background-color: #3884ff1a; 
+    border: 1px solid #3884ff50; 
+    box-shadow: 0 0 10px 8px #3884ff80,
+}
+
+.bg-green-trans{
+    background-color: #38ff421a; 
+    border: 1px solid #38ff3f50; 
+    box-shadow: 0 0 10px 8px #67ff3880,
+}
+
+.bg-red-trans{
+    background-color: #ff38381a; 
+    border: 1px solid #ff383850; 
+    box-shadow: 0 0 10px 8px #ff383880,
+}
+
+.bg-pink-trans{
+    background-color: #ff38ca1a; 
+    border: 1px solid #ff38ca50; 
+    box-shadow: 0 0 10px 8px #ff38ca80,
+}
+
+
+.feature-card-mini{
+    height: 6rem !important;
+    width: 18.5rem !important;
+    border-radius: 0.8rem !important;
+    background-color: #0106215d !important;
+    border: 1px solid #010b3a!important;
+    color: white !important;
+}
+
+.feature-description{
+    color: #c3c3c3eb !important;
+}
+
+/* About Section */
+.about-section{
+    height: auto;
+    width:100%;
+    background-color: #000621;
+}
+
+.about-right img{
+  width: 40rem;
+  height: 18rem;
+  object-fit: cover;
+}
+
+/* Footer-Section */
+footer{
+    background-color: #01091d !important;
+}
+
+.nav-link-footer{
+    padding-left: 2rem !important;
+    padding-right: 2rem !important;
+}
+
+.nav-link-footer:hover{
+    color: #3B82F6 !important;
+    text-decoration: 1px underline !important;
+}

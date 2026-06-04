@@ -1,0 +1,542 @@
+
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+.description{
+    color: #e7e5e5e0 !important;
+} 
+
+body{
+    background-color: #000416 !important;
+    color: white !important;
+}
+
+/* Navbar Styling */
+.cust-nav{
+    position: fixed !important;
+    top: 0;         
+    left: 0;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    height:4rem;
+    width: 100%; 
+    z-index: 1000;
+    background-color: #00041a !important;
+    color: white;
+    border-bottom: 2px solid #2564eb1a;
+}
+
+.nav-left{
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    margin-left: 1.5rem;
+}
+
+.nav-left div{
+    margin-right: 0.5rem;
+}
+
+.nav-right{
+    margin-right: 1.5rem;
+}
+
+.nav-left-text{
+    display: flex;
+    flex-direction: column;
+}
+
+.nav-left-text span{
+    margin:0;
+    padding: 0;
+    line-height: 1.2;
+}
+
+.nav-mid{
+    display: flex;
+    flex-direction: row;
+
+}
+
+.nav-link-mid{
+    color: #ffffffbf;
+    padding-left: 2rem !important;
+    padding-right: 2rem !important;
+    font-size: 1rem;
+}
+
+/* CHANGE: Current page nav link stays blue after direct access or navigation. */
+.nav-link-mid.active-page{
+    color: #ffffffbf !important;
+    text-decoration: none !important;
+    font-size: 1.1rem;
+    font-weight: 600;
+    transform: none;
+}
+
+.nav-btn{
+    background-color: #2563EB !important;
+    color: white !important;
+}
+ 
+.nav-link-mid:hover{
+    transform: scale(1.1);
+    color: #3B82F6 !important;
+    text-decoration: 2px underline !important;
+    text-underline-offset: 0.7rem !important;
+}
+
+/* CHANGE: Current page link keeps its active style and ignores hover styling. */
+.nav-link-mid.active-page:hover{
+    color: #ffffffbf !important;
+    text-decoration: none !important;
+    transform: none;
+}
+.nav-btn:hover{
+   animation: pulse 1s ease-in-out infinite;
+}
+
+@keyframes pulse {
+    0% {
+        transform: scale(1);
+    }
+
+    50% {
+        transform: scale(1.15);
+    }
+
+    100% {
+        transform: scale(1);
+    }
+}
+
+
+/* Hero-section-styling */
+.hero-section{
+    margin: 1.5rem 4rem 0 4rem;
+    padding-top: 1rem;
+}
+
+.hero-description{
+    color: #d0d0d0eb !important;
+} 
+
+.hero-left{
+    margin-top:1.5rem !important;
+}
+
+/* scanner-hero */
+.hero-right{
+    height: 15rem;
+    overflow: hidden;
+}
+
+.hero-right img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.hero-input-card{
+    width: 90% !important;
+}
+
+
+/* Hero section for scanner page */
+.square-box {
+    width: 2.5rem; 
+    height: 2.5rem; 
+    border-radius: 20%; 
+}
+
+.hero-input-card{
+    height: auto;
+    width: auto;
+    border-radius: 0.8rem !important;
+    background-color: #0106215d !important;
+    border: 1px solid #021050!important;
+    color: white !important;
+}
+
+.input-bg{
+    border: 1px solid #021050!important;
+}
+
+
+.body-image{
+    height: 30rem;
+    object-fit: contain;
+}
+
+.body-image img{
+    height: 25rem;
+}
+
+.info-card{
+    height: 20rem !important;
+    width: 100% !important;
+    border-radius: 0.8rem !important;
+    background-color: #0106215d !important;
+    border: 1px solid #010b3a!important;
+    color: white !important;
+}
+
+.card-inner{
+    height: 13rem !important;
+    width: 18.5rem !important;
+    border-radius: 0.8rem !important;
+    background-color: #01062100 !important;
+    color: white !important;
+}
+
+.circle {
+    width: 5rem; 
+    height: 5rem; 
+    border-radius: 50%; 
+}
+
+.bg-blue-trans{
+    background-color: #3884ff1a; 
+    border: 1px solid #3884ff50; 
+    box-shadow: 0 0 10px 8px #3884ff80,
+}
+
+.bg-green-trans{
+    background-color: #38ff421a; 
+    border: 1px solid #38ff3f50; 
+    box-shadow: 0 0 10px 8px #67ff3880,
+}
+
+.bg-red-trans{
+    background-color: #ff38381a; 
+    border: 1px solid #ff383850; 
+    box-shadow: 0 0 10px 8px #ff383880,
+}
+
+.bg-pink-trans{
+    background-color: #ff38ca1a; 
+    border: 1px solid #ff38ca50; 
+    box-shadow: 0 0 10px 8px #ff38ca80,
+}
+
+.bg-yellow-trans{
+    background-color: #fff5381a; 
+    border: 1px solid #ffee3850; 
+    box-shadow: 0 0 10px 8px #ffee3880,
+}
+
+/* Footer-Section */
+footer{
+    background-color: #01091d !important;
+}
+
+.nav-link-footer{
+    padding-left: 2rem !important;
+    padding-right: 2rem !important;
+}
+
+.nav-link-footer:hover{
+    color: #3B82F6 !important;
+    text-decoration: 1px underline !important;
+}
+
+
+/* ================================================================== */
+.result-section{
+    /* Give the three result cards enough height for full content. */
+    height: 24rem;
+    width: min(96vw, 96rem) !important;
+    background-color: #01062100;
+    overflow: visible;
+    gap: 1.4rem;
+}
+
+.result-card{
+    height: 21rem;
+    width: 32%;
+    min-width: 0;
+    background-color:#11182758;
+    border: 1px solid rgba(255,255,255,0.08);
+    backdrop-filter: blur(15px);
+    border-radius: 20px;
+    box-shadow:
+        0 0 25px rgba(0,0,0,0.5);
+
+    overflow: hidden;
+    transition: transform 0.25s ease, border-color 0.25s ease, box-shadow 0.25s ease;
+
+}
+
+/* Make the score card a balanced card layout instead of nested boxes. */
+.box-left{
+    display: flex;
+    flex-direction: column;
+}
+
+.box-top{
+    flex: 1;
+    align-items: center;
+    padding: 0.9rem 1.15rem 0;
+}
+
+.result-card:hover{
+    transform: translateY(-4px);
+    border-color: rgba(255,255,255,0.18);
+    box-shadow:
+        0 0 30px rgba(37, 99, 235, 0.16),
+        0 0 25px rgba(0,0,0,0.55);
+}
+
+
+.wrapper{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex: 0 0 44%;
+}
+
+.result-circle{
+    position: relative;
+    width: 170px;
+    height: 170px;
+
+    --target-progress: 70;
+}
+
+svg{
+    width: 170px;
+    height: 170px;
+
+    transform: rotate(-90deg);
+}
+
+svg circle{
+    fill: none;
+    stroke-width: 12;
+    stroke-linecap: round;
+}
+
+.track{
+    stroke: #1e2a526a;
+}
+
+.progress{
+    stroke: lime;
+    stroke-dasharray: 440;
+    stroke-dashoffset: 440;
+
+    transition: stroke 0.3s;
+}
+
+.glow{
+    stroke: lime;
+
+    stroke-dasharray: 440;
+    stroke-dashoffset: 440;
+
+    filter: blur(6px);
+    opacity: 0.7;
+}
+
+.inner{
+    position: absolute;
+
+    top: 50%;
+    left: 50%;
+
+    transform: translate(-50%, -50%);
+
+    width: 102px;
+    height: 102px;
+
+    border-radius: 50%;
+
+    background-color: #11182758;;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    color: white;
+
+    font-size: 2rem;
+    font-weight: bold;
+
+    box-shadow: inset 0 0 10px rgba(0,0,0,0.5);
+}
+
+/* Keep the summary text clean; the whole card now carries the risk color. */
+.msg{
+    width: 52%;
+    margin: 0;
+    padding: 0.25rem 0 0;
+    animation: showResultRow 0.45s ease forwards;
+}
+
+.msg h3{
+    margin-bottom: 0.35rem;
+}
+
+.msg .small{
+    display: inline-block;
+    line-height: 1.7;
+}
+
+.box-bottom{
+    width: calc(100% - 2.2rem);
+    margin: 0 auto 0.85rem;
+    padding: 0.65rem 0 0;
+    border-top: 1px solid rgba(255,255,255,0.12);
+    background: transparent !important;
+    box-shadow: none !important;
+}
+
+.result-state-safe{
+    background-color: rgba(0, 255, 136, 0.08);
+    border-color: rgba(0, 255, 136, 0.35);
+    box-shadow:
+        inset 0 0 24px rgba(0, 255, 136, 0.07),
+        0 0 25px rgba(0,0,0,0.5);
+}
+
+.result-state-warning{
+    background-color: rgba(255, 183, 0, 0.08);
+    border-color: rgba(255, 183, 0, 0.38);
+    box-shadow:
+        inset 0 0 24px rgba(255, 183, 0, 0.08),
+        0 0 25px rgba(0,0,0,0.5);
+}
+
+.result-state-danger{
+    background-color: rgba(255, 59, 59, 0.08);
+    border-color: rgba(255, 59, 59, 0.4);
+    box-shadow:
+        inset 0 0 24px rgba(255, 59, 59, 0.08),
+        0 0 25px rgba(0,0,0,0.5);
+}
+
+.result-state-safe #heading-1,
+.result-state-safe #suggestion{
+    color: #00ff88;
+}
+
+.result-state-warning #heading-1,
+.result-state-warning #suggestion{
+    color: #ffcf48;
+}
+
+.result-state-danger #heading-1,
+.result-state-danger #suggestion{
+    color: #ff6b6b;
+}
+
+
+.risk-bar{
+
+    width: clamp(5.5rem, 8vw, 8.5rem);
+    height: 8px;
+
+    background: #1e293b;
+
+    border-radius: 20px;
+
+    overflow: hidden;
+
+}
+
+.risk-fill{
+
+    height: 100%;
+
+    border-radius: 20px;
+
+    /* Risk bars animate to the value generated in scanner.js. */
+    width: 0;
+    animation: fillRiskBar 0.8s ease forwards;
+
+}
+
+/* Let the dynamic card bodies fit all generated rows neatly. */
+#riskBreakdownBody,
+#detectedIssuesBody{
+    height: 16.6rem !important;
+    gap: 0.42rem;
+}
+
+.danger{
+
+    background: #ff3b3b;
+
+}
+
+.warning{
+
+    background: orange;
+
+}
+
+.safe{
+
+    background: #00ff88;
+
+}
+
+/* Animations for Risk Breakdown and Detected Issues cards. */
+.result-row-animate{
+    opacity: 0;
+    transform: translateY(10px);
+    animation: showResultRow 0.45s ease forwards;
+}
+
+.issue-item,
+.issue-empty{
+    display: flex;
+    align-items: center;
+    gap: 0.55rem;
+    min-height: 1.75rem;
+}
+
+.issue-safe{
+    padding: 0.25rem 0.35rem;
+    border-radius: 0.4rem;
+    background-color: rgba(0, 255, 136, 0.06);
+}
+
+.issue-danger{
+    padding: 0.25rem 0.35rem;
+    border-radius: 0.4rem;
+    background-color: rgba(255, 59, 59, 0.07);
+}
+
+.result-card-left{
+    display: flex;
+    align-items: center;
+    gap: 0.45rem;
+    min-width: 0;
+}
+
+.result-card-left .small,
+.issue-item .small{
+    overflow-wrap: anywhere;
+}
+
+.risk-score{
+    min-width: 3rem;
+    text-align: right;
+}
+
+@keyframes showResultRow {
+    to{
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes fillRiskBar {
+    to{
+        width: var(--risk-width);
+    }
+}

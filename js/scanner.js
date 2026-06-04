@@ -1,6 +1,7 @@
 
 const scannerInput = document.getElementById("scannerInput");
 const analyzeBtn = document.getElementById("analyzeBtn");
+const scannerClearBtn = document.getElementById("scannerClearBtn");
 
 /* CHANGE: Highlight the current nav link when this page is opened directly or by navigation. */
 setActiveNavLink();
@@ -158,8 +159,18 @@ analyzeBtn.addEventListener("click", () => {
 
 });
 
+scannerClearBtn.addEventListener("click", () => {
+
+    scannerInput.value = "";
+    scannerInput.focus();
+    clearInterval(progressTimer);
+    resultContainer.classList.add("d-none");
+    bodyImage.classList.remove("d-none");
+
+});
+
 // ENTER KEY SUPPORT
-document.getElementById("scannerInput")
+scannerInput
 .addEventListener("keydown", (event) => {
 
     if(event.key === "Enter"){

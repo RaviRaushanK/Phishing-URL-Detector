@@ -3,10 +3,12 @@
 setActiveNavLink();
 
 const scanBtn = document.getElementById("scanBtn");
+const homeInput = document.getElementById("homeInput");
+const homeClearBtn = document.getElementById("homeClearBtn");
 
 scanBtn.addEventListener("click", () => {
 
-    const url = document.getElementById("homeInput").value.trim();
+    const url = homeInput.value.trim();
 
     if(url === ""){
         alert("Please enter a URL");
@@ -21,10 +23,17 @@ scanBtn.addEventListener("click", () => {
 
 });
 
+homeClearBtn.addEventListener("click", () => {
+
+    homeInput.value = "";
+    homeInput.focus();
+
+});
+
 
 // ENTER KEY SUPPORT
 
-document.getElementById("homeInput")
+homeInput
 .addEventListener("keydown", (event) => {
 
     if(event.key === "Enter"){

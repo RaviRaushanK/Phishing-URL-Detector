@@ -72,7 +72,7 @@ body{
 }
 
 .nav-link-mid.active-page{
-    color: #3B82F6 !important;
+    color: #ffffffbf !important;
     text-decoration: none !important;
     font-size: 1.1rem;
     font-weight: 600;
@@ -92,7 +92,7 @@ body{
 }
 
 .nav-link-mid.active-page:hover{
-    color: #3B82F6 !important;
+    color: #ffffffbf !important;
     text-decoration: none !important;
     transform: none;
 }

@@ -161,6 +161,41 @@ body{
     color: white !important;
 }
 
+.hero-input-card .input-group{
+    border: 1px solid #17327d;
+    border-radius: 0.55rem;
+    overflow: hidden;
+    box-shadow: 0 0 10px rgba(37, 99, 235, 0.16);
+}
+
+.hero-input-card .input-group-text{
+    border: 0 !important;
+    color: #111827;
+}
+
+.url-input{
+    border: 0 !important;
+    box-shadow: none !important;
+}
+
+.clear-input-btn{
+    width: 3.4rem;
+    border: 0 !important;
+    border-left: 1px solid #d4d4d4 !important;
+    border-radius: 0 !important;
+    background-color: #f5f5f5 !important;
+    color: #4b5563 !important;
+}
+
+.clear-input-btn:hover{
+    background-color: #e5e7eb !important;
+    color: #dc2626 !important;
+}
+
+.clear-input-btn:focus{
+    box-shadow: none !important;
+}
+
 .input-bg{
     border: 1px solid #021050!important;
 }

@@ -36,6 +36,12 @@ body{
     width: 100%;
     height: 100%;
     object-fit: cover;
+    transition: transform 0.3s ease;
+}
+
+/* Adds subtle movement to page hero images without changing layout. */
+.hero-media:hover img{
+    transform: scale(1.03);
 }
 
 .content-band{
@@ -49,6 +55,14 @@ body{
     background-color: #0106215d !important;
     border: 1px solid #010b3a!important;
     color: white !important;
+    transition: transform 0.25s ease, border-color 0.25s ease, box-shadow 0.25s ease;
+}
+
+/* Gives About, Tips, and Contact cards a consistent hover lift. */
+.page-card:hover{
+    transform: translateY(-5px);
+    border-color: #17327d !important;
+    box-shadow: 0 0 18px rgba(37, 99, 235, 0.18);
 }
 
 .icon-circle {
@@ -56,6 +70,7 @@ body{
     height: 4.5rem;
     border-radius: 50%;
     flex: 0 0 4.5rem;
+    transition: transform 0.25s ease;
 }
 
 .mini-icon {
@@ -63,6 +78,14 @@ body{
     height: 2.7rem;
     border-radius: 20%;
     flex: 0 0 2.7rem;
+    transition: transform 0.25s ease;
+}
+
+/* Makes icon containers feel responsive on hover. */
+.page-card:hover .icon-circle,
+.tip-row:hover .mini-icon,
+.d-flex:hover > .mini-icon{
+    transform: scale(1.06);
 }
 
 .bg-blue-trans{
@@ -97,6 +120,13 @@ body{
 
 .tip-row{
     border-bottom: 1px solid #102154;
+    transition: transform 0.25s ease, background-color 0.25s ease;
+}
+
+/* Adds a light hover response to tip rows. */
+.tip-row:hover{
+    transform: translateX(4px);
+    background-color: rgba(37, 99, 235, 0.06);
 }
 
 .tip-row:last-child{
@@ -109,10 +139,18 @@ body{
     border-color: #132c76 !important;
     color: #ffffff !important;
     box-shadow: none !important;
+    transition: border-color 0.25s ease, box-shadow 0.25s ease;
 }
 
 .contact-input::placeholder{
     color: #7d86a5;
+}
+
+/* Highlights contact fields when users interact with them. */
+.contact-input:hover,
+.contact-input:focus{
+    border-color: #2563EB !important;
+    box-shadow: 0 0 12px rgba(37, 99, 235, 0.18) !important;
 }
 
 @media (max-width: 992px){

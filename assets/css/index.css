@@ -35,6 +35,12 @@ body{
     width: 100%;
     height: 100%;
     object-fit: cover;
+    transition: transform 0.3s ease;
+}
+
+/* Adds subtle movement to the hero image without changing layout. */
+.hero-right:hover img{
+    transform: scale(1.03);
 }
 
 .hero-input-card{
@@ -44,6 +50,14 @@ body{
     background-color: #0106215d !important;
     border: 1px solid #021050!important;
     color: white !important;
+    transition: border-color 0.25s ease, box-shadow 0.25s ease, transform 0.25s ease;
+}
+
+/* Makes the URL input card feel active on hover. */
+.hero-input-card:hover{
+    border-color: #17327d !important;
+    box-shadow: 0 0 18px rgba(37, 99, 235, 0.22);
+    transform: translateY(-2px);
 }
 
 .hero-input-card .input-group{
@@ -105,6 +119,14 @@ body{
     height: 15rem;
 }
 
+.guide-circle{
+    transition: transform 0.25s ease, border-color 0.25s ease, box-shadow 0.25s ease;
+}
+
+.guide-circle:hover{
+    transform: scale(1.06);
+}
+
 .dotted-line{
     width: 10rem;
     border-top: 2px dashed #fcfcfc;
@@ -125,6 +147,14 @@ body{
     background-color: #0106215d !important;
     border: 1px solid #010b3a!important;
     color: white !important;
+    transition: transform 0.25s ease, border-color 0.25s ease, box-shadow 0.25s ease;
+}
+
+/* Gives feature cards a clean interactive lift. */
+.feature-card:hover{
+    transform: translateY(-6px);
+    border-color: #17327d !important;
+    box-shadow: 0 0 18px rgba(37, 99, 235, 0.2);
 }
 
 .circle {
@@ -165,6 +195,14 @@ body{
     background-color: #0106215d !important;
     border: 1px solid #010b3a!important;
     color: white !important;
+    transition: transform 0.25s ease, border-color 0.25s ease, box-shadow 0.25s ease;
+}
+
+/* Matches the hover response of the statistic cards with the feature cards. */
+.feature-card-mini:hover{
+    transform: translateY(-4px);
+    border-color: #17327d !important;
+    box-shadow: 0 0 16px rgba(37, 99, 235, 0.18);
 }
 
 /* About Section */
@@ -178,5 +216,20 @@ body{
   width: 40rem;
   height: 18rem;
   object-fit: cover;
+  transition: transform 0.3s ease;
+}
+
+/* Keeps the about image visually responsive on hover. */
+.about-right:hover img{
+  transform: scale(1.02);
+}
+
+/* Adds a small hover response to safety tip items. */
+.tip{
+    transition: transform 0.25s ease;
+}
+
+.tip:hover{
+    transform: translateY(-4px);
 }
 

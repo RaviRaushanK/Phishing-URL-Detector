@@ -37,6 +37,12 @@ body{
     width: 100%;
     height: 100%;
     object-fit: cover;
+    transition: transform 0.3s ease;
+}
+
+/* Adds subtle movement to the scanner hero image without changing layout. */
+.hero-right:hover img{
+    transform: scale(1.03);
 }
 
 /* Hero section for scanner page */
@@ -44,6 +50,11 @@ body{
     width: 2.5rem; 
     height: 2.5rem; 
     border-radius: 20%; 
+    transition: transform 0.25s ease;
+}
+
+.square-box:hover{
+    transform: scale(1.06);
 }
 
 .hero-input-card{
@@ -53,6 +64,14 @@ body{
     background-color: #0106215d !important;
     border: 1px solid #021050!important;
     color: white !important;
+    transition: border-color 0.25s ease, box-shadow 0.25s ease, transform 0.25s ease;
+}
+
+/* Makes the scanner URL input card feel active on hover. */
+.hero-input-card:hover{
+    border-color: #17327d !important;
+    box-shadow: 0 0 18px rgba(37, 99, 235, 0.22);
+    transform: translateY(-2px);
 }
 
 .hero-input-card .input-group{
@@ -97,6 +116,12 @@ body{
 
 .body-image img{
     height: 25rem;
+    transition: transform 0.3s ease;
+}
+
+/* Adds a soft hover effect to the ready-to-scan image. */
+.body-image:hover img{
+    transform: scale(1.03);
 }
 
 .info-card{
@@ -114,6 +139,12 @@ body{
     border-radius: 0.8rem !important;
     background-color: #01062100 !important;
     color: white !important;
+    transition: transform 0.25s ease;
+}
+
+/* Gives each scanner check item a small hover lift. */
+.card-inner:hover{
+    transform: translateY(-5px);
 }
 
 .circle {
@@ -390,6 +421,15 @@ svg circle{
 
     background: #00ff88;
 
+}
+
+/* Adds a small hover response to safety tip items. */
+.tip{
+    transition: transform 0.25s ease;
+}
+
+.tip:hover{
+    transform: translateY(-4px);
 }
 
 /* Animations for Risk Breakdown and Detected Issues cards. */

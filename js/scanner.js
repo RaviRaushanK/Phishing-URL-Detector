@@ -2,6 +2,8 @@
 const scannerInput = document.getElementById("scannerInput");
 const analyzeBtn = document.getElementById("analyzeBtn");
 const scannerClearBtn = document.getElementById("scannerClearBtn");
+const scannerAlert = document.getElementById("scannerAlert");
+let scannerAlertTimer;
 
 const resultContainer = document.getElementById("resultContainer");
 const bodyImage = document.querySelector(".body-image");
@@ -148,9 +150,11 @@ analyzeBtn.addEventListener("click", () => {
     const url = scannerInput.value.trim();
 
     if(url === ""){
-        alert("Please enter URL");
+        showPageAlert(scannerAlert, "Please enter a URL before analyzing.", "warning");
         return;
     }
+
+    hidePageAlert(scannerAlert);
 
     analyzeURL(url);
 
@@ -163,6 +167,7 @@ scannerClearBtn.addEventListener("click", () => {
     clearInterval(progressTimer);
     resultContainer.classList.add("d-none");
     bodyImage.classList.remove("d-none");
+    hidePageAlert(scannerAlert);
 
 });
 
@@ -178,6 +183,14 @@ scannerInput
 
 });
 
+scannerInput.addEventListener("input", () => {
+
+    if(scannerInput.value.trim() !== ""){
+        hidePageAlert(scannerAlert);
+    }
+
+});
+
 
 
 // ============================================
@@ -185,6 +198,8 @@ scannerInput
 // ============================================
 
 function analyzeURL(url){
+
+    hidePageAlert(scannerAlert);
 
     // Hide image
     bodyImage.classList.add("d-none");
@@ -203,6 +218,25 @@ function analyzeURL(url){
     updateRiskBreakdown(analysis.checks);
 
     updateDetectedIssues(analysis.checks);
+
+}
+
+
+function showPageAlert(alertBox, message, type = "warning"){
+
+    clearTimeout(scannerAlertTimer);
+    alertBox.textContent = message;
+    alertBox.classList.remove("d-none", "page-alert-warning", "page-alert-danger", "page-alert-success");
+    alertBox.classList.add(`page-alert-${type}`);
+    scannerAlertTimer = setTimeout(() => hidePageAlert(alertBox), 3500);
+
+}
+
+
+function hidePageAlert(alertBox){
+
+    clearTimeout(scannerAlertTimer);
+    alertBox.classList.add("d-none");
 
 }
 
@@ -618,4 +652,3 @@ function getRiskClass(value, max){
     return "danger";
 
 }
-
